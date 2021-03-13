@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.omgss.ui.main.itemlist.ItemListActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorAccent"
+        android:elevation="@dimen/dimen_5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:background="?android:attr/actionBarItemBackground"
+            android:padding="@dimen/dimen_10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_50dp"
+            android:layout_marginEnd="@dimen/dimen_50dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimen_18sp"
+            app:fontFamily="@font/helvetica_bold" />
+
+
+        <ImageView
+            android:id="@+id/iv_toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:background="?android:attr/actionBarItemBackground"
+            android:padding="@dimen/dimen_10dp"
+            android:src="@drawable/ic_search" />
+
+        <RelativeLayout
+            android:id="@+id/rlSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:id="@+id/iv_search_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:padding="@dimen/dimen_10dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/colorGrey" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/iv_cancel_icon"
+                android:layout_toEndOf="@id/iv_search_icon"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:hint="Search"
+                android:imeOptions="actionDone"
+                android:padding="@dimen/dimen_10dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/dimen_14sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_cancel_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:background="?android:attr/actionBarItemBackground"
+                android:padding="@dimen/dimen_10dp"
+                android:src="@drawable/ic_cancel_round" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlToolbar"
+        android:background="@color/colorWhite">
+
+
+        <TextView
+            android:id="@+id/tv_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_15dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimen_14sp"
+            tools:text="20 Products found" />
+
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dimen_15dp"
+            android:drawableEnd="@drawable/ic_price_filter"
+            android:drawablePadding="@dimen/dimen_15dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimen_14sp"
+            android:visibility="gone"
+            tools:text="Price - Low to High" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_below="@id/tv_filter"
+            android:background="@color/colorDivider" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/atv_no_data_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No data found!"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/dimen_18sp"
+        android:visibility="invisible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl"
+        android:clipToPadding="false"
+        android:padding="@dimen/dimen_10dp" />
+
+</RelativeLayout>

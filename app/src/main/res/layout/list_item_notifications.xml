@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_10dp"
+    android:background="@drawable/drawable_shape_rect_green_stroke"
+    android:paddingStart="@dimen/dimen_10dp"
+    android:paddingTop="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_20dp"
+    android:paddingBottom="@dimen/dimen_15dp">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dummy1"
+        app:placeholderImage="@drawable/ic_placeholder_gray" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_toEndOf="@id/image"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/dimen_14sp"
+        tools:text="Order Id: 1234lkjsalkdjlksajlkdjasdjlkjasdlkjalksjdlkjlkajdslknlknalskdlknasdlknlkasndlknlkansdlknalksndlknalksndlknalksndlknaslkdnalkndslknalkdsnlkand56" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_description"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_toEndOf="@id/image"
+        android:text="6:00 PM."
+        android:textColor="@color/colorLightGrey"
+        android:textSize="@dimen/dimen_13sp" />
+
+
+</RelativeLayout>

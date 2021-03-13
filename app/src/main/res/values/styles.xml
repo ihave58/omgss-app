@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/helvetica</item>
+        <item name="android:windowBackground">@color/colorScreenBG</item>
+        <item name="android:navigationBarColor">@color/colorBlack</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="WhiteStatusBarTheme" parent="AppTheme">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+    </style>
+
+    <style name="DialogBounceAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_zoom_out</item>
+    </style>
+
+    <style name="GreenButtonStyle">
+        <item name="android:textSize">@dimen/dimen_15sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="fontFamily">@font/helvetica_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/dimen_15dp</item>
+        <item name="android:paddingEnd">@dimen/dimen_15dp</item>
+        <item name="android:paddingTop">@dimen/dimen_10dp</item>
+        <item name="android:paddingBottom">@dimen/dimen_10dp</item>
+        <item name="android:background">@drawable/drawable_green_btn_bg</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+    </style>
+</resources>

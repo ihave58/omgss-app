@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="in.omgss.ui.verifyOtp.VerifyOtpActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_15dp"
+        android:background="?android:attr/actionBarItemBackground"
+        android:padding="@dimen/dimen_10dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/tv_label_verify_mobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:text="@string/verify_mobile_number"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/dimen_26sp"
+        app:fontFamily="@font/helvetica_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <TextView
+        android:id="@+id/tv_label_otphas_been_sent_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:text="@string/a_verification_otp_has_been_sent_to"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="@dimen/dimen_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_verify_mobile_number" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_30dp"
+        android:drawableEnd="@drawable/ic_edit"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="@dimen/dimen_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_otphas_been_sent_to"
+        tools:text="8527646078" />
+
+    <LinearLayout
+        android:id="@+id/ll_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number">
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:background="@drawable/shape_drawable_rect_rounded_corners"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:background="@drawable/shape_drawable_rect_rounded_corners"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/et3"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:background="@drawable/shape_drawable_rect_rounded_corners"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/et4"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:background="@drawable/shape_drawable_rect_rounded_corners"
+            android:gravity="center"
+            android:inputType="phone"
+            android:maxLength="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/dimen_12sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_otp"
+        tools:text="@string/app_name" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/GreenButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_error" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

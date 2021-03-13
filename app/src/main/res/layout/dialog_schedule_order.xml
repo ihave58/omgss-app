@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_main"
+    android:background="@drawable/drawable_bottom_dialog_bg">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:text="Schedule Order Timings"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/dimen_16sp"
+        app:fontFamily="@font/helvetica_bold" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/aiv_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:padding="@dimen/dimen_10dp"
+        app:srcCompat="@drawable/ic_success_tick" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_title"
+        android:background="@color/colorDivider" />
+
+    <TextView
+        android:id="@+id/tv_schedule_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:background="@drawable/shape_drawable_rect_rounded_corners"
+        android:drawableEnd="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/dimen_15dp"
+        android:paddingStart="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_12dp"
+        android:paddingEnd="@dimen/dimen_15dp"
+        android:paddingBottom="@dimen/dimen_12dp"
+        android:textColor="@color/colorBlack"
+        tools:text="@string/app_name" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_schedule_date"
+        android:background="@color/colorDivider" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_schedule_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_schedule_date"
+        android:layout_marginTop="@dimen/dimen_1dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_item_schedule_time" />
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "in.omgss"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    flavorDimensions "flavour"
+    productFlavors {
+        development {
+            dimension "flavour"
+
+            def API_BASE_URL = '"https://omgss.in/api/v1/"'
+            def IMAGE_BASE_URL = '"https://omgss.in/"'
+            def APP_ID = '"androidomgss9436"'
+
+            buildConfigField "String", "API_BASE_URL", API_BASE_URL
+            buildConfigField "String", "IMAGE_BASE_URL", IMAGE_BASE_URL
+            buildConfigField "String", "APP_ID", APP_ID
+
+            resValue "string", "RAZORPAY_API_KEY", "rzp_test_KG0sAGH3C2F9Iy"
+            resValue "string", "google_key", "AIzaSyBmMl-ve5rhx0Bm1_RqYusbaeOiYmWZDAQ"
+        }
+
+        production {
+            dimension "flavour"
+
+            def API_BASE_URL = '"https://omgss.in/api/v1/"'
+            def IMAGE_BASE_URL = '"https://omgss.in/"'
+            def APP_ID = '"androidomgss9436"'
+
+            buildConfigField "String", "API_BASE_URL", API_BASE_URL
+            buildConfigField "String", "IMAGE_BASE_URL", IMAGE_BASE_URL
+            buildConfigField "String", "APP_ID", APP_ID
+
+            resValue "string", "RAZORPAY_API_KEY", "rzp_live_rtE82zjI4OH5RQ"
+            resValue "string", "google_key", "AIzaSyBmMl-ve5rhx0Bm1_RqYusbaeOiYmWZDAQ"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "com.android.support:design:${support_lib_version}"
+
+    implementation 'me.relex:circleindicator:2.1.4'
+
+    //ButterKnife
+    implementation "com.jakewharton:butterknife:${butterknife_lib_version}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${butterknife_lib_version}"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:${retrofit_lib_version}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit_lib_version}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofit_lib_version}"
+    // logging interceptor for retrofit
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
+
+    // Fresco - for loading images
+    implementation "com.facebook.fresco:fresco:${fresco_version}"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // for razor-pay
+    implementation 'com.razorpay:checkout:1.5.16'
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

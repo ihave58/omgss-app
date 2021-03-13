@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.careers.CareersActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dummy2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000" />
+
+    <include layout="@layout/layout_toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@drawable/shape_drawable_rect_rounded_corners"
+                android:drawableStart="@drawable/ic_account"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:hint="Full Name"
+                android:inputType="textCapWords"
+                android:padding="@dimen/dimen_12dp"
+                android:singleLine="true"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <EditText
+                android:id="@+id/ete_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_fullname"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@drawable/shape_drawable_rect_rounded_corners"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dimen_12dp"
+                android:singleLine="true"
+                android:textSize="@dimen/dimen_14sp" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ete_email"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@drawable/shape_drawable_rect_rounded_corners"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tv_country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:ems="4"
+                    android:gravity="center"
+                    android:maxLength="4"
+                    android:paddingTop="@dimen/dimen_12dp"
+                    android:paddingBottom="@dimen/dimen_12dp"
+                    android:text="+91"
+                    android:textColor="@color/colorBlack" />
+
+                <View
+                    android:layout_width="@dimen/dimen_1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_4dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_4dp"
+                    android:layout_marginBottom="@dimen/dimen_8dp"
+                    android:alpha="0.5"
+                    android:background="@color/colorLightGrey" />
+
+                <EditText
+                    android:id="@+id/et_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:digits="1234567890"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="@dimen/dimen_12dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/dimen_14sp" />
+
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_phone_number"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@drawable/shape_drawable_rect_rounded_corners"
+                android:hint="Address"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/dimen_12dp"
+                android:singleLine="true"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <EditText
+                android:id="@+id/et_workex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_address"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@drawable/shape_drawable_rect_rounded_corners"
+                android:hint="Work Experience"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/dimen_12dp"
+                android:singleLine="true"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_workex"
+                android:layout_marginTop="@dimen/dimen_15dp">
+
+
+                <EditText
+                    android:id="@+id/et_prev_sal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_drawable_rect_rounded_corners"
+                    android:digits="1234567890,."
+                    android:hint="Previous Salary"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="@dimen/dimen_12dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dimen_14sp" />
+
+                <EditText
+                    android:id="@+id/et_exp_sal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_drawable_rect_rounded_corners"
+                    android:digits="1234567890,."
+                    android:hint="Expected Salary"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="@dimen/dimen_12dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dimen_14sp" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etcomments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@drawable/shape_drawable_rect_rounded_corners"
+                android:hint="Comments"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/dimen_12dp"
+                android:singleLine="true"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <Button
+                android:id="@+id/btn_update"
+                style="@style/GreenButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etcomments"
+                android:layout_margin="@dimen/dimen_20dp"
+                android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_addresses" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

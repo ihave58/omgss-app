@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#21bf73</color>
+    <color name="colorPrimaryDark">#21bf73</color>
+    <color name="colorAccent">#21bf73</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#212121</color>
+    <color name="colorScreenBG">#F6F7F8</color>
+    <color name="colorLightGrey">#ACACAC</color>
+    <color name="colorGrey">#A1A1A1</color>
+    <color name="colorSideMenuTop">#26000000</color>
+    <color name="colorDivider">#33A1A1A1</color>
+    <color name="colorRed">#D83C3C</color>
+</resources>

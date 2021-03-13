@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_dialog_bg"
+        android:paddingBottom="@dimen/dimen_50dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="@dimen/dimen_50dp"
+        android:layout_margin="@dimen/dimen_50dp"
+        android:paddingStart="@dimen/dimen_20dp"
+        android:paddingEnd="@dimen/dimen_20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+
+        <ImageView
+            android:id="@+id/iv_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_success"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_20dp" />
+
+
+        <TextView
+            android:id="@+id/tv_verification_succesful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_26sp"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:layout_marginBottom="@dimen/dimen_30dp"
+            android:gravity="center"
+            app:fontFamily="@font/helvetica_bold"
+            android:textColor="@color/colorBlack"
+            android:alpha="0.75"
+            android:text="@string/verification_nsuccessful" />
+
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimen_16sp"
+            android:text="@string/done"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:background="@drawable/drawable_green_btn_bg_rounded" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.omgss">
+
+    <application
+        android:name="in.omgss.DeliveryItemsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="in.omgss.ui.hireus.HireUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.omgss.ui.main.mydevices.DeviceComplaintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.omgss.ui.changepassword.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name="in.omgss.ui.profile.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.addedaddress.AddedAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.wishlist.WishlistActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.orders.OrdersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.support.SupportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.omgss.ui.complain.ComplainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.omgss.ui.careers.CareersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.omgss.ui.info.InfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.subcategories.CategoriesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.detail.DetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.resetpassword.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name="in.omgss.ui.signup.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name="in.omgss.ui.contactus.ContactUsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.notifications.NotificationsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.orderdetail.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.offers.OffersActivty"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.verifyOtp.VerifyOtpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name="in.omgss.ui.updatemobilenumber.UpdateMobileNumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme" />
+        <activity
+            android:name="in.omgss.ui.settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.orders.OrderReceivedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.cart.CartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name="in.omgss.ui.webview.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.main.itemlist.ItemListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="in.omgss.ui.addeditaddress.AddEditAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="in.omgss.ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteStatusBarTheme"
+            android:value="@string/app_id" />
+        <activity
+            android:name="in.omgss.ui.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- RazorPay ApiKey -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="@string/RAZORPAY_API_KEY" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_key" />
+
+        <service android:name="in.omgss.services.LocationUpdateService" />
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorScreenBG"
+    tools:context=".ui.main.mydevices.MyDevicesFragment">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/atv_no_data_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No devices found!"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/dimen_18sp"
+        android:visibility="invisible" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srlDevices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_submit">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_my_devices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="@dimen/dimen_5dp"
+            tools:listitem="@layout/list_item_my_devices" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/GreenButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:padding="@dimen/dimen_10dp"
+        android:text="Complain"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

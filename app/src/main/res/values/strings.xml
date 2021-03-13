@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">OMG</string>
+
+    <string name="app_name_full">Overall Maintenance Guaranteed</string>
+
+    <string name="glad_to_see_you">Glad to see you :)</string>
+    <string name="please_enter_your_mobile_number_nto_login_with_us">Please enter email address and password\nto login with us</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="verify">Verify</string>
+    <string name="by_signing_in_you_agreee_to_our_terms_and_conditions">By signing in, you agree to our Terms and Conditions</string>
+    <string name="verify_mobile_number">Verify Mobile Number</string>
+    <string name="a_verification_otp_has_been_sent_to">A verification OTP has been sent to</string>
+    <string name="submit">Submit</string>
+    <string name="done">Done</string>
+    <string name="verification_nsuccessful">Verification\nSuccessful</string>
+    <string name="press_back_again_to_exit">Press back again to exit</string>
+    <string name="shop_quickly_from_your_favourites">Shop quickly from your favourites</string>
+    <string name="_3000_rs"><strike>3000 Rs</strike> </string>
+    <string name="no_orders_found">No orders found!</string>
+    <string name="services">Services:</string>
+    <string name="view_details">View Details</string>
+    <string name="order_id">"Order ID: "</string>
+    <string name="currency">"Rs. "</string>
+    <string name="ordered_on">"Ordered on: "</string>
+    <string name="reorder">Reorder</string>
+    <string name="add">Add</string>
+    <string name="service_address">Service Address</string>
+    <string name="products_found">Product(s) found</string>
+    <string name="remove">Remove</string>
+    <string name="view_coupons"><u>View Coupons</u></string>
+    <string name="app_id">597651723652854</string>
+
+</resources>
