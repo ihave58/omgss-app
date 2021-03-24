@@ -63,16 +63,18 @@ public class CartActivity extends BaseActivity implements PaymentResultWithDataL
     TextView tvLabelCouponDiscount;
     @BindView(R.id.tv_label_tax)
     TextView tvLabelTax;
-    @BindView(R.id.tv_label_delivery_charges)
-    TextView tvLabelDeliveryCharges;
-    @BindView(R.id.tv_item_total)
+	 @BindView(R.id.tv_item_total)
     TextView tvItemTotal;
+ 
+// code add here
+ @BindView(R.id.tv_new_total_after_discount)
+    TextView tvNewTotal;
+   //end 
     @BindView(R.id.tv_coupon_discount)
     TextView tvCouponDiscount;
     @BindView(R.id.tv_tax)
     TextView tvTax;
-    @BindView(R.id.tv_delivery_charges)
-    TextView tvDeliveryCharges;
+  
     @BindView(R.id.tv_total)
     TextView tvTotal;
     @BindView(R.id.tv_address_type)
@@ -199,19 +201,45 @@ public class CartActivity extends BaseActivity implements PaymentResultWithDataL
 
     private void updateCartAmount() {
         itemTotal = 0;
+		     //code addd
+			 double newtotal = 0;
+			 //end
         for (Orderdetail items : cartList) {
             itemTotal = itemTotal + (items.getQuantity() * items.getActualprice());
+			//code addd
+			  newtotal = newtotal + (items.getQuantity()*items.getSaleprice());	  
+			  //end
 
             // double newtotal = items.getActualprice()-items.getSaleprice();
         }
+		
+		//code addd
+        if (couponResponse == null){
+            // coupon is not applied
+            discountValue = itemTotal - newtotal ;
 
-        double tax = itemTotal * (taxPercent / 100);
+        } else {
+            // coupon is applied
+            newtotal = itemTotal - discountValue ;
+        }
+		//end
 
+        double tax = newtotal * (taxPercent / 100);
+		
+		cartTotal = newtotal + tax;
 
-        cartTotal = itemTotal + tax + deliveryCharges - discountValue;
+       // cartTotal = newtotal + tax + deliveryCharges - discountValue;
 
         tvItemTotal.setText(getString(R.string.currency));
         tvItemTotal.append(String.format("%.2f", itemTotal));
+		
+		//code addd
+		 tvCouponDiscount.setText(getString(R.string.currency));
+        tvCouponDiscount.append(String.format("%.2f", discountValue));
+		
+		tvNewTotal.setText(getString(R.string.currency));
+        tvNewTotal.append(String.format("%.2f", newtotal));
+		//end
 
         // tvCouponDiscount.setText(getString(R.string.currency));
         //tvCouponDiscount.append(String.format("%.2f", discountValue));
@@ -222,8 +250,8 @@ public class CartActivity extends BaseActivity implements PaymentResultWithDataL
         tvTax.setText(getString(R.string.currency));
         tvTax.append(String.format("%.2f", tax));
 
-        tvDeliveryCharges.setText(getString(R.string.currency));
-        tvDeliveryCharges.append(String.format("%.2f", deliveryCharges));
+        //tvDeliveryCharges.setText(getString(R.string.currency));
+        //tvDeliveryCharges.append(String.format("%.2f", deliveryCharges));
 
         tvTotal.setText(getString(R.string.currency));
         tvTotal.append(String.format("%.2f", cartTotal));
