@@ -1,4 +1,4 @@
-package in .omgss.ui.cart;
+package in.omgss.ui.cart;
 
 import android.content.Intent;
 import android.os.Bundle;
