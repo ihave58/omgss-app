@@ -28,26 +28,26 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import in .omgss.BuildConfig;
-import in .omgss.R;
-import in .omgss.adapters.CartItemsAdapter;
-import in .omgss.base.BaseActivity;
-import in .omgss.constants.PreferenceConstants;
-import in .omgss.data.DataManager;
-import in .omgss.data.api.ApiConstants;
-import in .omgss.dialogs.ConfirmationDialog;
-import in .omgss.interfaces.CartItemClickListener;
-import in .omgss.interfaces.DialogCallback;
-import in .omgss.pojo.responses.CommonApiResponse;
-import in .omgss.pojo.responses.addresslist.AddressListResponse;
-import in .omgss.pojo.responses.cartresponse.CartResponse;
-import in .omgss.pojo.responses.cartresponse.Orderdetail;
-import in .omgss.pojo.responses.createrazorpayorder.CreateRazorPayOrder;
-import in .omgss.pojo.responses.validatecoupon.Response;
-import in .omgss.pojo.responses.validatecoupon.ValidateCouponResponse;
-import in .omgss.ui.addedaddress.AddedAddressActivity;
-import in .omgss.ui.offers.OffersActivty;
-import in .omgss.ui.orders.OrderReceivedActivity;
+import in.omgss.BuildConfig;
+import in.omgss.R;
+import in.omgss.adapters.CartItemsAdapter;
+import in.omgss.base.BaseActivity;
+import in.omgss.constants.PreferenceConstants;
+import in.omgss.data.DataManager;
+import in.omgss.data.api.ApiConstants;
+import in.omgss.dialogs.ConfirmationDialog;
+import in.omgss.interfaces.CartItemClickListener;
+import in.omgss.interfaces.DialogCallback;
+import in.omgss.pojo.responses.CommonApiResponse;
+import in.omgss.pojo.responses.addresslist.AddressListResponse;
+import in.omgss.pojo.responses.cartresponse.CartResponse;
+import in.omgss.pojo.responses.cartresponse.Orderdetail;
+import in.omgss.pojo.responses.createrazorpayorder.CreateRazorPayOrder;
+import in.omgss.pojo.responses.validatecoupon.Response;
+import in.omgss.pojo.responses.validatecoupon.ValidateCouponResponse;
+import in.omgss.ui.addedaddress.AddedAddressActivity;
+import in.omgss.ui.offers.OffersActivty;
+import in.omgss.ui.orders.OrderReceivedActivity;
 import okhttp3.MultipartBody;
 
 public class CartActivity extends BaseActivity implements PaymentResultWithDataListener {
@@ -292,7 +292,7 @@ public class CartActivity extends BaseActivity implements PaymentResultWithDataL
           if (response.getStatus().equalsIgnoreCase(ApiConstants.STATUS_SUCCESS)) {
             if (response.getResponse() != null && response.getResponse().size() > 0) {
 
-              in .omgss.pojo.responses.addresslist.Response data = response.getResponse().get(0);
+              in.omgss.pojo.responses.addresslist.Response data = response.getResponse().get(0);
               if (data != null) {
                 addressId = data.getId();
                 addressName = data.getAddressprofilename();
