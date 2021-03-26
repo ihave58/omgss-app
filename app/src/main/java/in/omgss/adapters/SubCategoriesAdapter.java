@@ -24,8 +24,8 @@ public class SubCategoriesAdapter extends RecyclerView.Adapter<SubCategoriesAdap
 
     private Context mContext;
     private String type;
-    private ArrayList<in.omgss.pojo.responses.subcategory.Response> mData;
-    private RecyclerItemClickListener IRecyclerItemClickListener;
+    private final ArrayList<in.omgss.pojo.responses.subcategory.Response> mData;
+    private final RecyclerItemClickListener IRecyclerItemClickListener;
 
 
     public SubCategoriesAdapter(ArrayList<Response> mData, RecyclerItemClickListener itemClickListener) {

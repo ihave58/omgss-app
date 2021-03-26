@@ -20,8 +20,8 @@ import in.omgss.interfaces.RecyclerItemClickListener;
 public class ScheduleTimeAdapter extends RecyclerView.Adapter<ScheduleTimeAdapter.TimeViewHolder> {
 
     private Context context;
-    private ArrayList<String> mTimeList;
-    private RecyclerItemClickListener itemClickListener;
+    private final ArrayList<String> mTimeList;
+    private final RecyclerItemClickListener itemClickListener;
     private int selectedPosition = -1;
 
     public ScheduleTimeAdapter(ArrayList<String> mTimeList, RecyclerItemClickListener itemClickListener) {

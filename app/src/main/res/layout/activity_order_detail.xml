@@ -211,7 +211,8 @@
                         android:textColor="@color/colorLightGrey"
                         android:textSize="@dimen/dimen_14sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_label_coupon_discount" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_label_coupon_discount"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/tv_label_delivery_charges"
@@ -248,7 +249,8 @@
                         app:fontFamily="@font/helvetica_bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_item_total"
-                        tools:text="200 Rs" />
+                        tools:text="200 Rs"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/tv_tax"
@@ -261,7 +263,8 @@
                         app:fontFamily="@font/helvetica_bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_coupon_discount"
-                        tools:text="50 Rs" />
+                        tools:text="50 Rs"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/tv_delivery_charges"
@@ -292,7 +295,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/dimen_10dp"
-                        android:text="Total"
+                        android:text="Total(after discount)"
                         android:textColor="@color/colorBlack"
                         app:fontFamily="@font/helvetica_bold"
                         app:layout_constraintBottom_toBottomOf="parent"

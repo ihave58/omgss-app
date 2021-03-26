@@ -9,7 +9,7 @@ import in.omgss.pojo.responses.myorders.OrdersListResponse;
 import okhttp3.MultipartBody;
 
 public class OrdersViewModel extends BaseViewModel {
-    private OrdersRepo mRepository = new OrdersRepo();
+    private final OrdersRepo mRepository = new OrdersRepo();
 
     private RichMediatorLiveData<OrdersListResponse> ordersLiveData;
 

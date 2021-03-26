@@ -10,7 +10,7 @@ import in.omgss.pojo.responses.categories.CategoriesResponse;
 import okhttp3.RequestBody;
 
 public class HomeViewModel extends BaseViewModel {
-    private HomeRepo mRepository = new HomeRepo();
+    private final HomeRepo mRepository = new HomeRepo();
 
     private RichMediatorLiveData<HomeSliderResponse> homeSliderLiveData;
     private RichMediatorLiveData<CategoriesResponse> categoryLiveData;

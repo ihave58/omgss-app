@@ -10,7 +10,7 @@ import in.omgss.pojo.responses.categories.CategoriesResponse;
 import okhttp3.RequestBody;
 
 public class HireUsViewModel extends BaseViewModel {
-    private HireUsRepo mRepository = new HireUsRepo();
+    private final HireUsRepo mRepository = new HireUsRepo();
 
     private RichMediatorLiveData<CommonApiResponse> hireUsLiveData;
     private RichMediatorLiveData<CategoriesResponse> categoriesLiveData;

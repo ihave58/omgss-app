@@ -25,7 +25,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ItemsVie
 
     private final ArrayList<Response> addressList;
     private final AddressItemClickListener clickListener;
-    private boolean hideOptions;
+    private final boolean hideOptions;
     private Context mContext;
 
 

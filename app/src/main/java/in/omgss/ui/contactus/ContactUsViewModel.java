@@ -13,7 +13,7 @@ import okhttp3.RequestBody;
 public class ContactUsViewModel extends BaseViewModel {
 
 
-    private ContactUsRepo mRepository = new ContactUsRepo();
+    private final ContactUsRepo mRepository = new ContactUsRepo();
     private MutableLiveData<Integer> validationliveData;
 
     private RichMediatorLiveData<CommonApiResponse> mResendOtpLiveData;

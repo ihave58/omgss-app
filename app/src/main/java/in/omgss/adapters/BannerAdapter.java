@@ -18,8 +18,8 @@ import in.omgss.pojo.responses.Response;
 
 public class BannerAdapter extends PagerAdapter {
 
-    private AppCompatActivity mActivity;
-    private ArrayList<Response> mData;
+    private final AppCompatActivity mActivity;
+    private final ArrayList<Response> mData;
 
 
     public BannerAdapter(AppCompatActivity mActivity, ArrayList<Response> mData) {

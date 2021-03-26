@@ -22,7 +22,7 @@ public class OffersAdapter extends RecyclerView.Adapter<OffersAdapter.ItemsViewh
 
 
     private Context mContext;
-    private ArrayList<Response> mData;
+    private final ArrayList<Response> mData;
 
     public OffersAdapter(ArrayList<Response> mData) {
         this.mData = mData;

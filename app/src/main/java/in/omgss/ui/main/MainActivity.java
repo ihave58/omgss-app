@@ -76,7 +76,7 @@ public class MainActivity extends BaseActivity {
 
 
     // updating cart batch count
-    private BroadcastReceiver batchCountUpdateReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver batchCountUpdateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (!isFinishing() && !isDestroyed()) {

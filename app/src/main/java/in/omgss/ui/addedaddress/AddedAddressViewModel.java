@@ -10,7 +10,7 @@ import in.omgss.pojo.responses.addresslist.AddressListResponse;
 import okhttp3.MultipartBody;
 
 public class AddedAddressViewModel extends BaseViewModel {
-    private AddedAddressRepo mRepository = new AddedAddressRepo();
+    private final AddedAddressRepo mRepository = new AddedAddressRepo();
 
     private RichMediatorLiveData<AddressListResponse> addressListLiveData;
     private RichMediatorLiveData<CommonApiResponse> deleteAddressLiveData;

@@ -11,7 +11,7 @@ import in.omgss.pojo.responses.SignUpResponse;
 import okhttp3.RequestBody;
 
 public class SignupViewModel extends BaseViewModel {
-    private SignUpRepo mRepository = new SignUpRepo();
+    private final SignUpRepo mRepository = new SignUpRepo();
     private MutableLiveData<Integer> validationliveData;
     private RichMediatorLiveData<SignUpResponse> registrationLiveData;
 

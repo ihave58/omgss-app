@@ -13,7 +13,7 @@ import okhttp3.RequestBody;
 public class ComplainViewModel extends BaseViewModel {
 
 
-    private ComplainRepo mRepository = new ComplainRepo();
+    private final ComplainRepo mRepository = new ComplainRepo();
     private MutableLiveData<Integer> validationliveData;
 
     private RichMediatorLiveData<CommonApiResponse> mResendOtpLiveData;

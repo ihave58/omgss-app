@@ -25,8 +25,8 @@ import in.omgss.pojo.responses.wishlist.Orderdetail;
 public class WishlistItemAdapter extends RecyclerView.Adapter<WishlistItemAdapter.ItemsViewholder> {
 
     private Context mContext;
-    private ProductItemClickListener clickListener;
-    private ArrayList<Orderdetail> mData;
+    private final ProductItemClickListener clickListener;
+    private final ArrayList<Orderdetail> mData;
     private int position = 0;
 
 

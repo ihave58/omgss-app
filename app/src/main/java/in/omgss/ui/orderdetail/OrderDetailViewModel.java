@@ -9,7 +9,7 @@ import in.omgss.pojo.responses.CommonApiResponse;
 import okhttp3.MultipartBody;
 
 public class OrderDetailViewModel extends BaseViewModel {
-    private OrderDetailRepo mRepository = new OrderDetailRepo();
+    private final OrderDetailRepo mRepository = new OrderDetailRepo();
 
     private RichMediatorLiveData<CommonApiResponse> cancelOrderLiveData;
 

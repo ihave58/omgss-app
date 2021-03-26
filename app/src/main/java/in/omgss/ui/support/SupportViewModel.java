@@ -13,7 +13,7 @@ import okhttp3.RequestBody;
 public class SupportViewModel extends BaseViewModel {
 
 
-    private SupportRepo mRepository = new SupportRepo();
+    private final SupportRepo mRepository = new SupportRepo();
     private MutableLiveData<Integer> validationliveData;
 
     private RichMediatorLiveData<CommonApiResponse> mResendOtpLiveData;

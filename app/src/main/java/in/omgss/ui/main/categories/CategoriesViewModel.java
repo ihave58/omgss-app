@@ -9,7 +9,7 @@ import in.omgss.pojo.responses.categories.CategoriesResponse;
 import okhttp3.RequestBody;
 
 public class CategoriesViewModel extends BaseViewModel {
-    private CategoriesRepo mRepository = new CategoriesRepo();
+    private final CategoriesRepo mRepository = new CategoriesRepo();
 
     private RichMediatorLiveData<CategoriesResponse> mResendOtpLiveData;
 

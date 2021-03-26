@@ -51,7 +51,7 @@ public class ItemsOrderDetailAdapter extends RecyclerView.Adapter<ItemsOrderDeta
         holder.tvQuantity.append(String.valueOf(orderList.get(position).getQuantity()));
 
         holder.tvPrice.setText(mContext.getText(R.string.currency));
-        holder.tvPrice.append(String.format("%.2f", orderList.get(position).getSaleprice()));
+        holder.tvPrice.append(String.format("%.2f", orderList.get(position).getActualprice()));
 
     }
 

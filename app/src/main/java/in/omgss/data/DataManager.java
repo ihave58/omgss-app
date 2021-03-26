@@ -29,8 +29,8 @@ import retrofit2.Call;
 public class DataManager {
 
     private static DataManager instance;
-    private ApiManager apiManager;
-    private PreferenceManager preferenceManager;
+    private final ApiManager apiManager;
+    private final PreferenceManager preferenceManager;
 
 
     private DataManager(Context context) {

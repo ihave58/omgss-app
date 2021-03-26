@@ -41,8 +41,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiManager {
 
     private static ApiManager instance;
-    private ApiInterface apiClient;
-    private OkHttpClient httpClient;
+    private final ApiInterface apiClient;
+    private final OkHttpClient httpClient;
 
     private ApiManager() {
         httpClient = getHttpClient();

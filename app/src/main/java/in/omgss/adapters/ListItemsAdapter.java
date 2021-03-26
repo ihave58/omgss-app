@@ -25,8 +25,8 @@ import in.omgss.pojo.responses.products.Response;
 public class ListItemsAdapter extends RecyclerView.Adapter<ListItemsAdapter.ItemsViewholder> {
 
     private Context mContext;
-    private ProductItemClickListener clickListener;
-    private ArrayList<Response> mData;
+    private final ProductItemClickListener clickListener;
+    private final ArrayList<Response> mData;
     private int position = 0;
 
 

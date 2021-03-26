@@ -23,6 +23,9 @@ public class Orderdetail implements Parcelable {
     @SerializedName("saleprice")
     @Expose
     private double saleprice;
+    @SerializedName("actualprice")
+    @Expose
+    private double actualprice;
     @SerializedName("quantity")
     @Expose
     private int quantity;
@@ -37,6 +40,7 @@ public class Orderdetail implements Parcelable {
         productimg = in.readString();
         thumbnail = in.readString();
         saleprice = in.readDouble();
+        actualprice = in.readDouble();
         quantity = in.readInt();
     }
 
@@ -92,6 +96,14 @@ public class Orderdetail implements Parcelable {
         this.saleprice = saleprice;
     }
 
+    public double getActualprice() {
+        return actualprice;
+    }
+
+    public void setActualprice(double actualprice) {
+        this.actualprice = actualprice;
+    }
+
     public int getQuantity() {
         return quantity;
     }
@@ -112,6 +124,7 @@ public class Orderdetail implements Parcelable {
         dest.writeString(productimg);
         dest.writeString(thumbnail);
         dest.writeDouble(saleprice);
+        dest.writeDouble(actualprice);
         dest.writeInt(quantity);
     }
 }

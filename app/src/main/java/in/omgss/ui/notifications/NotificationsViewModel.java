@@ -10,7 +10,7 @@ import in.omgss.pojo.responses.notifications.NotificationsResponse;
 import okhttp3.RequestBody;
 
 public class NotificationsViewModel extends BaseViewModel {
-    private NotificationsRepo mRepository = new NotificationsRepo();
+    private final NotificationsRepo mRepository = new NotificationsRepo();
 
     private RichMediatorLiveData<NotificationsResponse> notificationsLiveData;
     private RichMediatorLiveData<CommonApiResponse> clearNotificationCountLiveData;

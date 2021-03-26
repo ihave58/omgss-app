@@ -10,7 +10,7 @@ import in.omgss.pojo.responses.mydevices.MyDevicesResponse;
 import okhttp3.MultipartBody;
 
 public class MyDevicesViewModel extends BaseViewModel {
-    private MyDevicesRepo mRepository = new MyDevicesRepo();
+    private final MyDevicesRepo mRepository = new MyDevicesRepo();
 
     private RichMediatorLiveData<MyDevicesResponse> myDevicesLiveData;
     private RichMediatorLiveData<CommonApiResponse> deviceComplaintLiveData;

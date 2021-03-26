@@ -11,7 +11,7 @@ import okhttp3.RequestBody;
 public class OffersViewModel extends BaseViewModel {
 
 
-    private OffersRepo mRepository = new OffersRepo();
+    private final OffersRepo mRepository = new OffersRepo();
 
     private RichMediatorLiveData<OffersResponse> mResendOtpLiveData;
 

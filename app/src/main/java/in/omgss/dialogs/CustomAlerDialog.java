@@ -31,9 +31,12 @@ public class CustomAlerDialog extends Dialog {
     @BindView(R.id.view)
     View view;
 
-    private Context context;
-    private DialogCallback dialogCallback;
-    private String message, positiveButtonText, negativeButtonText, title;
+    private final Context context;
+    private final DialogCallback dialogCallback;
+    private final String message;
+    private final String positiveButtonText;
+    private final String negativeButtonText;
+    private final String title;
 
     public CustomAlerDialog(Context context, String title, String message, String positiveButtonText, String negativeButtonText, DialogCallback dialogCallback) {
         super(context);

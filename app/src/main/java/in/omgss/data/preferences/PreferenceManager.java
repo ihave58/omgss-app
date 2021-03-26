@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 public class PreferenceManager {
 
     private static PreferenceManager instance;
-    private SharedPreferences sharedPref;
+    private final SharedPreferences sharedPref;
 
     private PreferenceManager(Context context) {
         sharedPref = android.preference.PreferenceManager.getDefaultSharedPreferences(context);

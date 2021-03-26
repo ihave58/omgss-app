@@ -134,7 +134,7 @@ public class OrderDetailActivity extends BaseActivity {
 
             double itemTotal = 0;
             for (Orderdetail item : data.getOrderdetails()) {
-                itemTotal = itemTotal + (item.getQuantity() * item.getSaleprice());
+                itemTotal = itemTotal + (item.getQuantity() * item.getActualprice());
             }
 
             tvItemTotal.setText(getString(R.string.currency));
@@ -143,15 +143,11 @@ public class OrderDetailActivity extends BaseActivity {
             tvCouponDiscount.setText(getString(R.string.currency));
             tvCouponDiscount.append(String.format("%.2f", data.getDiscountvalue()));
 
-            tvDeliveryCharges.setText(getString(R.string.currency));
-            tvDeliveryCharges.append(String.format("%.2f", data.getDeliverycharges()));
-
             tvTax.setText(getString(R.string.currency));
             tvTax.append(String.format("%.2f", data.getTaxvalue()));
 
             tvTotal.setText(getString(R.string.currency));
             tvTotal.append(String.format("%.2f", data.getTotalordervalue()));
-
 
             ItemsOrderDetailAdapter mOrdersAdapter = new ItemsOrderDetailAdapter(data.getOrderdetails());
             rvItems.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));

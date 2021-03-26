@@ -9,7 +9,7 @@ import in.omgss.pojo.responses.CommonApiResponse;
 import okhttp3.MultipartBody;
 
 public class AddEditAddressViewModel extends BaseViewModel {
-    private AddEditAddressRepo mRepository = new AddEditAddressRepo();
+    private final AddEditAddressRepo mRepository = new AddEditAddressRepo();
 
     private RichMediatorLiveData<CommonApiResponse> addAddressLiveData;
 

@@ -14,7 +14,7 @@ import in.omgss.pojo.ViewPagerModel;
 
 public class AppViewPagerAdapter extends FragmentStatePagerAdapter {
 
-    private ArrayList<ViewPagerModel> mFragmentList;
+    private final ArrayList<ViewPagerModel> mFragmentList;
 
     public AppViewPagerAdapter(@NonNull FragmentManager fm, ArrayList<ViewPagerModel> fragmentList) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);

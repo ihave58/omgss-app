@@ -13,7 +13,7 @@ import okhttp3.RequestBody;
 public class CareerViewModel extends BaseViewModel {
 
 
-    private CareerRepo mRepository = new CareerRepo();
+    private final CareerRepo mRepository = new CareerRepo();
     private MutableLiveData<Integer> validationliveData;
 
     private RichMediatorLiveData<CommonApiResponse> mResendOtpLiveData;

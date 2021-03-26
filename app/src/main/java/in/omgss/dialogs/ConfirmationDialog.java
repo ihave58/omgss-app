@@ -28,9 +28,12 @@ public class ConfirmationDialog extends Dialog {
     @BindView(R.id.tv_delete)
     TextView tvDelete;
 
-    private Context context;
-    private DialogCallback dialogCallback;
-    private String title, message, positve, negative;
+    private final Context context;
+    private final DialogCallback dialogCallback;
+    private final String title;
+    private final String message;
+    private final String positve;
+    private final String negative;
 
     public ConfirmationDialog(Context context, String title, String message, String positive, String negative, DialogCallback dialogCallback) {
         super(context);

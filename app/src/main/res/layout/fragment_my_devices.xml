@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorScreenBG"
-    tools:context=".ui.main.mydevices.MyDevicesFragment">
+    tools:context="in.omgss.ui.main.mydevices.MyDevicesFragment">
 
 
     <androidx.appcompat.widget.AppCompatTextView

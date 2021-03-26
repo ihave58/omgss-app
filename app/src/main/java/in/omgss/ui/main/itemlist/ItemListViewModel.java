@@ -9,7 +9,7 @@ import in.omgss.pojo.responses.products.ProductsResponse;
 import okhttp3.RequestBody;
 
 public class ItemListViewModel extends BaseViewModel {
-    private ItemListRepo mRepository = new ItemListRepo();
+    private final ItemListRepo mRepository = new ItemListRepo();
 
     private RichMediatorLiveData<ProductsResponse> mResendOtpLiveData;
 

@@ -13,7 +13,7 @@ import in.omgss.pojo.responses.validatecoupon.ValidateCouponResponse;
 import okhttp3.MultipartBody;
 
 public class CartViewModel extends BaseViewModel {
-    private CartRepo mRepository = new CartRepo();
+    private final CartRepo mRepository = new CartRepo();
 
     private RichMediatorLiveData<ValidateCouponResponse> validateCouponLiveData;
 

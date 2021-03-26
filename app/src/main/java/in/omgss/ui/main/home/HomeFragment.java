@@ -57,7 +57,7 @@ public class HomeFragment extends BaseFragment {
     private ArrayList<in.omgss.pojo.responses.categories.Response> itemsList;
 
 
-    private BroadcastReceiver refreshDataReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver refreshDataReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (isFragmentAdded()) {

@@ -19,9 +19,9 @@ import in.omgss.interfaces.VerificationDialogInterface;
  */
 public class VerificationSuccessfulDialog extends Dialog {
 
-    private Context context;
-    private VerificationDialogInterface verificationDialogInterface;
-    private String message;
+    private final Context context;
+    private final VerificationDialogInterface verificationDialogInterface;
+    private final String message;
 
     public VerificationSuccessfulDialog(Context context, VerificationDialogInterface verificationDialogInterface, String message) {
         super(context);

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.addedaddress.AddedAddressActivity">
+    tools:context="in.omgss.ui.addedaddress.AddedAddressActivity">
 
     <include
         layout="@layout/layout_toolbar"

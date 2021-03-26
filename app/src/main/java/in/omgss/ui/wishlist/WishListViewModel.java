@@ -10,7 +10,7 @@ import okhttp3.MultipartBody;
 
 
 public class WishListViewModel extends BaseViewModel {
-    private WishlistRepo mRepository = new WishlistRepo();
+    private final WishlistRepo mRepository = new WishlistRepo();
 
     private RichMediatorLiveData<WishlistResponse> wishlistLiveData;
 

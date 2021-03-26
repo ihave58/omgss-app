@@ -24,7 +24,7 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
 
 
     private Context mContext;
-    private ArrayList<Response> mData;
+    private final ArrayList<Response> mData;
 
     public NotificationsAdapter(ArrayList<Response> mData) {
         this.mData = mData;

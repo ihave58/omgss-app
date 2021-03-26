@@ -17,8 +17,8 @@ import in.omgss.interfaces.DialogCallback;
  */
 public class ChangeLanguageDialog extends Dialog {
 
-    private Context context;
-    private DialogCallback dialogCallback;
+    private final Context context;
+    private final DialogCallback dialogCallback;
 
     public ChangeLanguageDialog(Context context, DialogCallback dialogCallback) {
         super(context);

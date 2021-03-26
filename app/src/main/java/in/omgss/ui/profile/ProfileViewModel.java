@@ -10,7 +10,7 @@ import in.omgss.pojo.responses.LoginResponse;
 import okhttp3.MultipartBody;
 
 public class ProfileViewModel extends BaseViewModel {
-    private ProfileRepo mRepository = new ProfileRepo();
+    private final ProfileRepo mRepository = new ProfileRepo();
 
     private RichMediatorLiveData<LoginResponse> profileLiveData;
     private RichMediatorLiveData<CommonApiResponse> updateProfileLiveData;

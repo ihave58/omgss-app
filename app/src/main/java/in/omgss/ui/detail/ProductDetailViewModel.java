@@ -9,7 +9,7 @@ import in.omgss.pojo.responses.viewproduct.ViewproductResponse;
 import okhttp3.RequestBody;
 
 public class ProductDetailViewModel extends BaseViewModel {
-    private ProductDetailRepo mRepository = new ProductDetailRepo();
+    private final ProductDetailRepo mRepository = new ProductDetailRepo();
 
     private RichMediatorLiveData<ViewproductResponse> detailsLiveData;
 

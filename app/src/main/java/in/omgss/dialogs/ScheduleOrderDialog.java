@@ -40,14 +40,14 @@ public class ScheduleOrderDialog extends BottomSheetDialog {
     @BindView(R.id.rv_schedule_time)
     RecyclerView rvScheduleTime;
 
-    private Calendar minCal = Calendar.getInstance();
-    private Calendar maxCal = Calendar.getInstance();
+    private final Calendar minCal = Calendar.getInstance();
+    private final Calendar maxCal = Calendar.getInstance();
 
     private final ScheduleOrderCallBack scheduleOrderCallBack;
     private String selectedTime;
     private DatePickerDialog datePickerDialog;
 
-    private ArrayList<String> mTimeList = new ArrayList<>();
+    private final ArrayList<String> mTimeList = new ArrayList<>();
     private ScheduleTimeAdapter mTimeAdapter;
 
 

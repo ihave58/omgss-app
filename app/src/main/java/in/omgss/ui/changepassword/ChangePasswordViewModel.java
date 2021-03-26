@@ -9,7 +9,7 @@ import in.omgss.pojo.responses.CommonApiResponse;
 import okhttp3.MultipartBody;
 
 public class ChangePasswordViewModel extends BaseViewModel {
-    private ChangePasswordRepo mRepository = new ChangePasswordRepo();
+    private final ChangePasswordRepo mRepository = new ChangePasswordRepo();
 
     private RichMediatorLiveData<CommonApiResponse> changePasswordLiveData;
 

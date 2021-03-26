@@ -11,7 +11,7 @@ import in.omgss.pojo.responses.LoginResponse;
 import okhttp3.RequestBody;
 
 public class LoginViewModel extends BaseViewModel {
-    private LoginRepo mRepository = new LoginRepo();
+    private final LoginRepo mRepository = new LoginRepo();
 
     private MutableLiveData<Integer> validationliveData;
     private RichMediatorLiveData<LoginResponse> loginLiveData;

@@ -24,7 +24,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.It
 
     private Context mContext;
     private String type;
-    private ArrayList<Response> mData;
+    private final ArrayList<Response> mData;
 
 
     public CategoriesAdapter(ArrayList<Response> mData) {

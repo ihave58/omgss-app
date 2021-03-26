@@ -79,10 +79,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @return true if location permission is granted else false
      */
     public boolean isLocationPermissionGranted() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
-            return true;
-        else
-            return false;
+        return ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
 
     /**

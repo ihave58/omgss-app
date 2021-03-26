@@ -19,8 +19,8 @@ import in.omgss.pojo.responses.categories.Product;
 
 public class ProductsAdapter extends PagerAdapter {
 
-    private AppCompatActivity mActivity;
-    private ArrayList<Product> mData;
+    private final AppCompatActivity mActivity;
+    private final ArrayList<Product> mData;
 
 
     public ProductsAdapter(AppCompatActivity mActivity, ArrayList<Product> mData) {
